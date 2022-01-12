@@ -147,7 +147,7 @@ int peg_append(peg *peg, void *value)
     } 
 
     size_t offset = peg->count * peg->type;
-    memcpy(peg->data + offset, value, peg->type);
+    peg->data[offset] = *(uint8_t*)value;
     peg->count++;
 
     puts("Disc added");
