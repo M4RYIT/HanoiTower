@@ -1,0 +1,1 @@
+clang -Iinc -o bin\app.exe src\*.c
